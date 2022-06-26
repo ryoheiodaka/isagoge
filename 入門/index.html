@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ヘッダー固定ナビゲーションバー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <h2 class="logo">Relax</h2>
+            <ul class="menu">
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#">本サイトについて</a></li>
+                <li><a href="#">ブログ</a></li>
+                <li><a href="#">オンライン相談</a></li>
+                <li><a href="#">お問合せ</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="text-area">
+        <p class="text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod voluptates saepe a, sint tempora facere exercitationem, libero aperiam facilis corrupti atque amet possimus asperiores qui magnam ut suscipit debitis, quasi iste impedit sapiente vitae. Alias
+            non autem qui commodi! Debitis cupiditate ea voluptatum, sint soluta eveniet dolore in atque accusamus architecto laudantium aliquam sunt necessitatibus? Asperiores, dolore rerum laborum distinctio deleniti enim dicta maiores adipisci, amet
+            culpa eaque ea commodi facilis illum exercitationem sit nisi debitis sed blanditiis. Porro dolor et facilis quos quia, incidunt temporibus laboriosam illo quo dicta praesentium totam sequi minus saepe, aperiam quod cumque eos soluta cum quis
+            voluptate magnam inventore repellendus fugit? Amet, dolores est non aliquid excepturi ullam consectetur beatae iure porro eligendi totam sequi nostrum odio voluptates, impedit, in deleniti sed veritatis eaque adipisci dignissimos ut deserunt.
+            Voluptatibus, fugiat sit aperiam officia mollitia aliquid cum iste delectus at? Tempore nobis corporis nesciunt quos.
+        </p>
+    </div>
+    <script>
+        const navbar = document.querySelector(".navbar");
+        const menu = document.querySelector(".menu");
+        //ヘッダーがulタグの位置に来たら、ヘッダーを固定する。
+        window.addEventListener("scroll", () => {
+            // console.log(window.pageYOffset);
+            // console.log(menu.offsetTop)
+            if (window.pageYOffset >= menu.offsetTop) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+
+        });
+    </script>
+</body>
+
+</html>
